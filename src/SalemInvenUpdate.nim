@@ -18,7 +18,7 @@ proc extractProductInfo(xml: XmlNode) =
   # Get all product cards
   let products = xml.querySelectorAll(".card-wrapper")
   
-  for product in products:
+  for product in products: #tweak later
     # Get product name
     let nameElement = product.querySelector(".card__heading a")
     let name = if nameElement != nil: nameElement.innerText.strip() else: "Unknown"
